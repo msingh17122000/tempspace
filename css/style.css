@@ -3,10 +3,10 @@
     margin:0;
   }
   body{
-    background-color:#F7F5EB;
+    background-color:#FCFCFC;
   }
   :root {
-    --theme: #82C3EC;
+    --theme: #5EB1BF;
   }
   @font-face {
       font-family: logoFont;
@@ -69,7 +69,7 @@
   }
   .searchBar input:focus{
     transition: 0.5s ease;
-    border:2px solid #ADE792;
+    border:2px solid #54F2F2;
   }
     @media only screen and (max-width: 1025px) {
       .navContainer nav{
@@ -146,6 +146,49 @@
         height:25px;
       }
     }
+
+
+/* Footer Section */
+.footer-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding:20px;
+  font-family: baseFont;
+  font-size:14px;
+  background-color:#042A2B ;
+  color:white;
+}
+.footer-container .sectionHeading{
+  font-size: 15px;
+}
+.footer-container a{
+  text-decoration: none;
+  color:white;
+  opacity: 80%;
+}
+.footer-container a:hover{
+opacity: 100%;
+transition: 0.3s ease;
+}
+#about{
+  opacity: 80%;
+}
+.sectionDescription{
+  margin-top:10px;
+  padding-left:5px;
+}
+.copyright{
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+}
+@media only screen and (max-width: 1025px) {
+.footer-container{
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+}
+
+}
 
 
 
@@ -251,7 +294,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 90vh;
-
 }
 .backdrop-image{
   background-image: url('../assets/streetlight.jpg');
@@ -284,9 +326,7 @@
 {
   display: flex;
   grid-column: 2;
-  padding:20px;
   align-items: center;
-  
   justify-content: center;
 
 }
@@ -343,9 +383,75 @@
 @media only screen and (max-width: 1025px) {
 .loginContainer{
   display: grid;
-  grid-template-columns: 0fr 1fr;
+  grid-template-columns:  1fr;
 }
 .backdrop-image{
   display: none;
+}
+}
+
+/* UPLOAD PAGE CSS */
+.pageHeading{
+  font-family: baseFont;
+  text-align: center;
+  font-size: 25px;
+  padding:10px;
+}
+.form-container{
+  padding:10px;
+  font-family: baseFont;
+  display: grid;
+  row-gap: 20px;
+}
+#upload-photo-button{
+  display: none;
+}
+#upload-button{
+  border:1px solid #5EB1BF;
+  background-color: #5EB1BF;
+  color:white;
+  text-align: center;
+  border-radius: 5px;
+  padding:10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+#upload-button:hover{
+background-color: transparent;
+color: #5EB1BF;
+transition: 0.3s ease;
+}
+#caption{
+  padding:10px;
+  width:400px;
+  font-family: baseFont;
+  resize: none;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #616161;
+}
+#caption:focus{
+  border-color: #5EB1BF;
+  transition: 0.5s ease;
+}
+.share-btn{
+  background-color: #FCFCFC;
+  border:1px solid #616161;
+  padding:10px;
+  border-radius: 5px;
+  font-family: baseFont;
+  cursor: pointer;
+}
+.share-btn:hover{
+  background-color: black;
+  color:white;
+  transition: 0.3s ease;
+}
+@media only screen and (max-width: 1025px) {
+#upload-button{
+  width:300px;
+}
+#caption{
+  width:300px;
 }
 }
