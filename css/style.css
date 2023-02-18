@@ -89,7 +89,7 @@
         text-align: center;
       }
       .searchBar input{
-        width:50%;
+        width:90%;
         text-align: center;
       }
       .navContainer{
@@ -286,109 +286,82 @@ transition: 0.3s ease;
     }
 
 
-
-
-/* LogIn Page CSS */
-
-.loginContainer{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: 90vh;
-}
-.backdrop-image{
-  background-image: url('../assets/streetlight.jpg');
-  grid-column: 1;
-  height:100%;
-  background-size: cover;
-  background-position: center;
-}
-.backdrop-imageText{
-  color:white;
-  display: flex;
-  align-items: center;
-  height: 100%;
-  font-family: baseFont;
-  backdrop-filter: blur(4px);
-  font-size:4vw;
-  justify-content: center;
-}
-.backdrop-imageTextSmall{
-  font-size: 20px;
-  color:white;
-  display: flex;
-  align-items: center;
-  height: 100%;
-  font-family: baseFont;
-  backdrop-filter: blur(4px);
-  justify-content: center;
-}
-.form-container
-{
-  display: flex;
-  grid-column: 2;
-  align-items: center;
-  justify-content: center;
-
-}
-.input-form{
+/* LOGIN PAGE */
+.login-form-container{
+  background-color: #ffffff;
+  padding: 10px;
   text-align: center;
- 
 }
-.input-form input
-{
-  width:300px;
-  margin:12px;
-  padding: 8px;
-  font-family: regularFont;
-  border:none;
-  background-color: #F7F5EB;
-  border-bottom:1px solid rgb(139, 139, 139);
-  outline:none;  
-}
-.input-form input:focus{
-  border-bottom:1px solid rgb(15, 92, 236);
-  transition: 0.8s ease;
-}
-.form-head{
-  text-align: center;
-  font-family: regularFont;
-  font-weight: 800;
-  font-size:35px;
-  padding:10px;
-}
-.form-head2{
-  text-align: center;
-  font-family: regularFont;
-  padding-bottom:10px;
-}
-.forgot-link{
-  text-decoration: none;
-  font-family: regularFont;
-  font-size:12px;
-  color:rgb(15, 92, 236);
-}
-.login-button{
-  padding:12px;
-  width:90%;
-  border: none;
-  background-color:black;
-  color:white;
+.login-form{
+  background-color: white;
+  padding:20px;
+  width:400px;
+  margin: auto;
   border-radius: 5px;
+  display: grid;
+  grid-template-rows: auto;
+  align-items: center;
+  justify-content: center;
+  row-gap: 20px;
 }
-.login-button:hover{
-  background-color: rgb(36, 36, 36);
-  cursor: pointer;
+.login-heading{
+  font-family: logoFont;
+  padding:10px;
+  font-size: 40px;
+}
+.login-input{
+  width:300px;
+  padding:8px;
+  font-family: baseFont;
+  font-size: 12px;
+  background-color: white;
+  border: none;
+  border: 1px solid rgba(158, 158, 158, 0.288);
+  border-radius: 4px;
+  outline:none ;
+}
+.login-input:focus{
+  background-color: #FCFCFC;
+  border:1px solid black;
   transition: 0.4s ease;
 }
-@media only screen and (max-width: 1025px) {
-.loginContainer{
-  display: grid;
-  grid-template-columns:  1fr;
+.login-btn{
+  border:1px solid #03bbdb;
+  background-color: #03bbdb;
+  color:white;
+  text-align: center;
+  border-radius: 5px;
+  padding:10px;
+  font-size: 14px;
+  cursor: pointer;
 }
-.backdrop-image{
-  display: none;
+.login-btn:hover{
+  border:1px solid #5EB1BF;
+  background-color: #5EB1BF;
+  transition: 0.4s ease;
 }
+.forgot-pass{
+  text-align: center;
+  text-decoration: none;
+  font-family: regularFont;
+  font-size: 13px;
+  color:#009fbb
 }
+.login-para{
+  font-family: regularFont;
+  font-size: 14px;
+}
+@media only screen and (max-width: 430px) {
+  .login-form{
+    width:200px;
+  }
+  .login-input{
+    width:auto;
+  }
+}
+
+
+
 
 /* UPLOAD PAGE CSS */
 .pageHeading{
@@ -401,7 +374,11 @@ transition: 0.3s ease;
   padding:10px;
   font-family: baseFont;
   display: grid;
+  grid-template-rows: auto;
   row-gap: 20px;
+  width:400px;
+  margin: auto;
+  
 }
 #upload-photo-button{
   display: none;
@@ -447,11 +424,17 @@ transition: 0.3s ease;
   color:white;
   transition: 0.3s ease;
 }
-@media only screen and (max-width: 1025px) {
+@media only screen and (max-width: 430px) {
 #upload-button{
-  width:300px;
+  width:auto;
 }
 #caption{
-  width:300px;
+  width:auto;
+}
+.share-btn{
+  width:auto;
+}
+.form-container{
+  width:auto;
 }
 }
