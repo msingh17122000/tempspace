@@ -23,29 +23,47 @@
 
 
 <!-- LOGIN FORM -->
-<div class="loginContainer">
-    <div class="backdrop-image">
-        <div class="backdrop-imageText">Share Your Photos </div>
-    </div>
-    <div class="form-container">
-        <br><br><br><br>
-        <form name="login-form">
-            <div class="form-head">Welcome Back!</div>
-           <div class="form-head2">Please enter your details</div> 
-           <div class="input-form">
-            <input type="text"placeholder="Email/Username"name="username">
-            <br>
-            <input type="password"placeholder="Password"name="password">
-            <br><br>
-            <a href="#"class="forgot-link">Forgot Password ?</a>
-            <br>
-            <br>
-            <button class="login-button">Sign In</button>
-
-            </div>
-        </form>
-
-    </div>
+<div class="login-form-container">
+  <div class="login-heading">BuddyBase</div>
+  <form name="login-form"class="login-form">
+    <input type="text"class="login-input"placeholder="Username">
+    <input type="password"class="login-input"placeholder="Password">
+    <button class="login-btn"type="submit">LogIn</button>
+    <a href="#"class="forgot-pass">Forgot password?</a>
+    <p class="login-para">Don't have an account? <a href="#"class="forgot-pass">Sign up</a></p>
+  </form>
 </div>
+
+
+<br><br><br><br><br>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-container">
+      <div class="sections">
+        <div class="sectionHeading">Services</div>
+        <div class="sectionDescription"><a href="#">Create account</a><br>
+        <a href="upload.php">Upload photo</a>
+      </div>
+      </div>
+      <div class="sections">
+        <div class="sectionHeading">About us</div>
+        <div class="sectionDescription"><a href="#">Team</a><br>
+        <a href="#">Manpreet Singh</a>
+      </div>
+      </div>
+      <div class="sections">
+        <div class="sectionHeading">BuddyBase</div>
+        <div class="sectionDescription"id="about">
+        BuddyBase is free online photo sharing platform. We are a team of photography enthusiasts who believe that sharing our images can bring us closer together and allow us to appreciate the beauty in the world around us.
+        Our platform is designed to make it easy for you to share your photos with the world. Whether you are a professional photographer or someone who simply loves taking pictures, we provide you with the tools to showcase your work in a beautiful and engaging way.
+      </div>
+      </div>
+      <div class="social-links"></div>
+      <div class="copyright">Copyright © 2022 BUDDYBASE Inc. All rights reserved</div>
+      <br><br><br><br>
+  </div>
+</footer>
+<!-- FOOTER END -->
 </body>
 </html>
