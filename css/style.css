@@ -33,19 +33,21 @@
     max-width: 1720px;
     margin: 0 auto;
     display: grid;
-    padding: 10px;
+    height:60px;
     grid-template-columns: 1fr 1fr;
+    align-items: center;
   }
   .navContainer nav a{
     text-decoration: none;
     letter-spacing: 0.5px;
   }
   .logo a{
-    grid-column: 1;
+    grid-column: 2;
     font-family: logoFont;
     color:var(--theme);
     font-size:22px;
-    margin-left: 10px;
+    margin-left: 20px;
+    align-self: center;
   }
   .logo a:hover{
     color:#86E5FF;
@@ -57,6 +59,7 @@
     font-family: baseFont;
     text-align: right;
     margin-right:10px;
+    align-items: center;
   }
   .searchBar input{
     width:300px;
@@ -67,10 +70,7 @@
     border:2px solid black;
     outline: none;
   }
-  .searchBar input:focus{
-    transition: 0.5s ease;
-    border:2px solid #54F2F2;
-  }
+
     @media only screen and (max-width: 1025px) {
       .navContainer nav{
         grid-template-columns: 1fr;
@@ -105,12 +105,11 @@
       justify-content: center;
       position: fixed;
       width:100%;
-      height:20px;
       bottom: 0;
       padding: 20px;
       background-color: rgba(0, 0, 0, 0.863);
       backdrop-filter: blur(20px);
-      /* background-color: #EAE0DA; */
+      
     }
     .navbarBottom img{
       width:25px;
@@ -139,7 +138,11 @@
       .navbarBottom{
         display: grid;
         grid-template-columns: repeat(5,1fr);
-        grid-column-gap: 0px;       
+        grid-column-gap: 0px; 
+        padding:0px;
+        text-align: center;
+        height:60px;
+             
       }
       .navbarBottom img{
         width:25px;
@@ -288,12 +291,12 @@ transition: 0.3s ease;
 
 /* LOGIN PAGE */
 .login-form-container{
-  background-color: #ffffff;
+  background-color: #FCFCFC;
   padding: 10px;
   text-align: center;
 }
 .login-form{
-  background-color: white;
+  background-color: #FCFCFC;
   padding:20px;
   width:400px;
   margin: auto;
@@ -437,4 +440,171 @@ transition: 0.3s ease;
 .form-container{
   width:auto;
 }
+}
+
+
+/* Signup Page CSS */
+.signup-heading{
+  font-family: regularFont;
+  font-size:16px;
+}
+
+
+/* User Profile Page CSS */
+
+.grid-container{
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+}
+.section-left{
+  text-align: center;
+  border-right:1px solid black;
+}
+.section-right{
+  border:none;
+  justify-self: center;
+}
+.user-profile-username{
+  padding: 5px;
+  font-family: regularFont;
+}
+.user-profile-username a{
+  text-decoration: none;
+  color: black;
+}
+.user-profile-name{
+  padding: 5px;
+  font-family: regularFont;
+}
+.user-profile-bio{
+  padding: 5px;
+  font-family: regularFont;
+  background-color: #f3f3f3;
+  margin-left:10px;
+  margin-right: 10px;
+}
+.user-profile-pic{
+  height:100px;
+  width:100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.user-followers-tab{
+  padding: 5px;
+  font-family: regularFont;
+}
+.follow-btn{
+  margin-left:10px;
+  padding: 10px;
+  font-family: regularFont;
+  background-color:#03bbdb;
+  border: none;
+  border-radius: 4px;
+  color:white;
+  cursor: pointer;
+}
+.follow-btn:hover{
+  background-color:#009ab5;
+}
+.post-container-userprofile{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.user-profile-posts{
+  height:200px;
+  width:200px;
+  object-fit: cover;
+  padding: 10px;
+}
+.user-profile-posts:hover{
+  opacity: 70%;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1320px) {
+  .post-container-userprofile{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .post-container-userprofile{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .grid-container{
+    grid-template-rows: 0.5fr 1fr ;
+    grid-template-columns: 1fr;
+  }
+  .post-container-userprofile{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .user-profile-posts{
+    height:150px;
+    width:150px;
+  }
+  .section-left{
+    grid-row: 1;
+    border: none;
+    border-bottom: 1px solid black;
+  }
+  .section-right{
+    grid-row: 2;
+  }
+}
+@media only screen and (max-width: 560px) {
+  .post-container-userprofile{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .user-profile-posts{
+    height:100px;
+    width:100px;
+  }
+}
+
+/* Devlopment Team CSS */
+
+.devloper-container{
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  text-align: center;
+  font-family: regularFont;
+}
+.devloper-section-left{
+  height:750px;
+}
+.devloper-section-left:hover{
+  filter: grayscale(100);
+  cursor: pointer;
+  transition: 1s ease;
+}
+.devloper-section-left img{
+  height:750px;
+  width:100%;
+  object-fit: cover;
+}
+.devloper-section-right{
+  color: white;
+  background-color: rgba(0, 0, 0, 0.966);
+}
+.devloper-section-right .heading{
+  font-size:40px;
+  padding:20px;
+}
+.devloper-section-right .description{
+  font-size: 20px;
+  padding:20px;
+}
+@media only screen and (max-width: 750px) {
+  .devloper-container{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .devloper-section-left{
+    height:600px;
+  }
+  .devloper-section-left img{
+    height:600px;
+  }
 }
